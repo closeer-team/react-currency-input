@@ -17,7 +17,7 @@ An ES2015 react component for currency. Supports custom decimal and thousand sep
 ## Changes after fork
 
 - The test checked the accuracy of decimal places by sending the 'precision' property. But the test sent 'precision = 0' and expected to receive 'precision = 2'. It was updated to receive precision equal to the value sent.
-- 
+
 ```javascript
         it('should consider precision absence', function() {
             const { inputComponent } = renderComponent({ precision: 0 });
