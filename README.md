@@ -4,7 +4,7 @@ An ES2015 react component for currency. Supports custom decimal and thousand sep
 
 [![Build Status](https://travis-ci.org/jsillitoe/react-currency-input.svg?branch=master)](https://travis-ci.org/jsillitoe/react-currency-input)
 
-## Changes
+## Changes on fork
 
 ## v1.3.0:
 
@@ -13,6 +13,19 @@ An ES2015 react component for currency. Supports custom decimal and thousand sep
 - Added parseFloat polyfill
 - Persist events to deal with an issue of event pooling
 - Other bug fixes.
+
+## Changes after fork
+
+- The test checked the accuracy of decimal places by sending the 'precision' property. But the test sent 'precision = 0' and expected to receive 'precision = 2'. It was updated to receive precision equal to the value sent.
+- 
+```javascript
+        it('should consider precision absence', function() {
+            const { inputComponent } = renderComponent({ precision: 0 });
+
+            expect(inputComponent.selectionStart).to.equal(0);
+            expect(inputComponent.selectionEnd).to.equal(0);
+        });
+```
 
 ## Installation
 
