@@ -449,8 +449,8 @@ describe('react-currency-input', function(){
         it('should consider precision absence', function() {
             const { inputComponent } = renderComponent({ precision: 0 });
 
-            expect(inputComponent.selectionStart).to.equal(2);
-            expect(inputComponent.selectionEnd).to.equal(2);
+            expect(inputComponent.selectionStart).to.equal(0);
+            expect(inputComponent.selectionEnd).to.equal(0);
         });
 
         xit('should highlight number on focus', function() {
